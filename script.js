@@ -869,7 +869,7 @@ function startConfettiRain(){
 
         drops++;
 
-        if(drops > 80){
+        if(drops > 40){
 
             clearInterval(rain);
 
