@@ -1,0 +1,2108 @@
+/* =====================================================
+   HAPPY BIRTHDAY WEBSITE
+   Blue & White Premium Theme
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+width:100%;
+height:100vh;
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(
+135deg,
+#001D4A,
+#003B8E,
+#0A5DFF,
+#8EC5FF,
+#F8FCFF
+);
+
+background-size:500% 500%;
+
+animation:bgMove 18s ease infinite;
+
+color:white;
+
+}
+
+/* Animated Background */
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* ================================= */
+
+.slide{
+
+position:absolute;
+
+width:100%;
+
+height:100vh;
+
+top:0;
+left:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:scale(.92);
+
+transition:
+
+opacity 1s ease,
+
+transform 1s ease,
+
+visibility 1s;
+
+}
+
+/* Active Slide */
+
+.slide.active{
+
+opacity:1;
+
+visibility:visible;
+
+transform:scale(1);
+
+z-index:5;
+
+}
+
+/* ================================= */
+
+.glass{
+
+width:90%;
+
+max-width:850px;
+
+padding:50px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(25px);
+
+border:2px solid rgba(255,255,255,.25);
+
+box-shadow:
+
+0 0 50px rgba(255,255,255,.20),
+
+0 0 120px rgba(0,132,255,.35);
+
+text-align:center;
+
+}
+
+/* ================================= */
+
+.title{
+
+font-size:60px;
+
+font-family:'Great Vibes',cursive;
+
+line-height:1.3;
+
+color:#ffffff;
+
+text-shadow:
+
+0 0 20px #8ec5ff,
+
+0 0 50px #ffffff;
+
+margin-bottom:70px;
+
+}
+
+/* ================================= */
+
+.btnBox{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+/* ================================= */
+
+button{
+
+padding:18px 55px;
+
+border:none;
+
+border-radius:60px;
+
+cursor:pointer;
+
+font-size:22px;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+/* YES BUTTON */
+
+.yesBtn{
+
+background:#ffffff;
+
+color:#0A5DFF;
+
+box-shadow:
+
+0 0 25px white,
+
+0 0 60px #66c6ff;
+
+}
+
+.yesBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* NO BUTTON */
+
+.noBtn{
+
+background:#0A5DFF;
+
+color:white;
+
+box-shadow:
+
+0 0 30px #2196F3;
+
+}
+
+.noBtn:hover{
+
+transform:scale(.92);
+
+}
+
+/* ================================= */
+
+.navigation{
+
+position:absolute;
+
+bottom:35px;
+
+right:35px;
+
+display:flex;
+
+gap:15px;
+
+}
+
+.prevBtn{
+
+background:white;
+
+color:#0050d0;
+
+}
+
+.nextBtn{
+
+background:#0050d0;
+
+color:white;
+
+}
+
+/* ================================= */
+
+.italianText{
+
+font-family:'Italianno',cursive;
+
+font-size:50px;
+
+color:white;
+
+line-height:1.5;
+
+text-align:center;
+
+text-shadow:
+
+0 0 15px white;
+
+}
+/* =====================================================
+   PREMIUM BACKGROUND EFFECTS
+===================================================== */
+
+/* Floating Particles */
+
+#particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+#particles::before{
+
+content:"";
+
+position:absolute;
+
+width:300%;
+height:300%;
+
+background-image:
+
+radial-gradient(circle,#ffffff 1px,transparent 1px),
+radial-gradient(circle,#8ec5ff 2px,transparent 2px),
+radial-gradient(circle,#d7f3ff 1.5px,transparent 1.5px);
+
+background-size:
+90px 90px,
+140px 140px,
+200px 200px;
+
+animation:particleMove 45s linear infinite;
+
+opacity:.45;
+
+}
+
+@keyframes particleMove{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(-250px,-350px);
+
+}
+
+}
+
+/* ========================================== */
+/* Sparkles */
+/* ========================================== */
+
+.sparkles{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.sparkles::before{
+
+content:"✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨";
+
+position:absolute;
+
+font-size:26px;
+
+width:100%;
+
+animation:sparkleMove 18s linear infinite;
+
+opacity:.9;
+
+}
+
+@keyframes sparkleMove{
+
+0%{
+
+transform:translateY(110vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* ========================================== */
+/* Floating Hearts */
+/* ========================================== */
+
+.floatingHearts{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.floatingHearts::before{
+
+content:"💙 🤍 💙 🤍 💙 🤍 ❤️ 💙 🤍";
+
+position:absolute;
+
+font-size:30px;
+
+animation:heartFloat 22s linear infinite;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(110vh);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ========================================== */
+/* Fireworks */
+/* ========================================== */
+
+#fireworks{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:999;
+
+overflow:hidden;
+
+}
+
+.firework{
+
+position:absolute;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 15px white,
+
+0 0 30px #8ec5ff,
+
+0 0 60px #ffffff;
+
+animation:explode 1.3s ease-out forwards;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:scale(.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(12);
+
+opacity:0;
+
+}
+
+}
+
+/* ========================================== */
+/* Confetti */
+/* ========================================== */
+
+#confetti{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:999;
+
+}
+
+.confetti{
+
+position:absolute;
+
+width:12px;
+
+height:20px;
+
+background:white;
+
+animation:confettiFall 5s linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+}
+
+}
+
+/* ========================================== */
+/* Celebration Balloons */
+/* ========================================== */
+
+.floatingBalloons{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.floatingBalloons::before{
+
+content:"🎈 🎈 🎈 🎈 🎈 🎈 🎈";
+
+position:absolute;
+
+font-size:55px;
+
+animation:balloonRise 18s linear infinite;
+
+}
+
+@keyframes balloonRise{
+
+0%{
+
+transform:translateY(120vh);
+
+}
+
+100%{
+
+transform:translateY(-140vh);
+
+}
+
+}
+
+/* ========================================== */
+/* Glow Animation */
+/* ========================================== */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:
+0 0 20px white,
+0 0 40px #5cbcff;
+
+}
+
+50%{
+
+box-shadow:
+0 0 40px white,
+0 0 80px #9dd8ff;
+
+}
+
+100%{
+
+box-shadow:
+0 0 20px white,
+0 0 40px #5cbcff;
+
+}
+
+}
+
+.glass,
+.letter,
+.futureLetter,
+.proposalLetter,
+.celebrationGlass{
+
+animation:glow 3s ease-in-out infinite;
+
+}
+/* =====================================================
+   SLIDE 2 - BALLOON GAME
+=====================================================*/
+
+.slideContainer{
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.slideTitle{
+
+font-size:55px;
+
+font-family:'Great Vibes',cursive;
+
+color:#fff;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 20px white,
+0 0 40px #5cbcff;
+
+}
+
+.instruction{
+
+font-size:22px;
+
+margin-bottom:60px;
+
+color:#eef7ff;
+
+font-weight:500;
+
+text-align:center;
+
+max-width:700px;
+
+}
+
+/* Balloon Area */
+
+.balloonArea{
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
+
+gap:70px;
+
+flex-wrap:wrap;
+
+}
+
+/* Individual Balloon */
+
+.balloon{
+
+width:120px;
+
+height:150px;
+
+border-radius:50% 50% 45% 45%;
+
+cursor:pointer;
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:70px;
+
+animation:floatBalloon 3.5s ease-in-out infinite;
+
+transition:.35s;
+
+}
+
+.balloon:nth-child(2){
+
+animation-delay:.8s;
+
+}
+
+.balloon:nth-child(3){
+
+animation-delay:1.5s;
+
+}
+
+.balloon:hover{
+
+transform:scale(1.12);
+
+}
+
+.balloonString{
+
+position:absolute;
+
+width:3px;
+
+height:110px;
+
+background:white;
+
+top:130px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+/* Floating Animation */
+
+@keyframes floatBalloon{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Balloon Message */
+
+.messageCard{
+
+position:absolute;
+
+width:80%;
+
+max-width:850px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+border:2px solid rgba(255,255,255,.35);
+
+display:none;
+
+text-align:center;
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.30),
+
+0 0 80px rgba(80,180,255,.40);
+
+z-index:50;
+
+}
+
+.messageCard p{
+
+font-family:'Italianno',cursive;
+
+font-size:54px;
+
+line-height:1.4;
+
+color:white;
+
+}
+
+/* =====================================================
+   SLIDE 3 - PHOTO GALLERY
+=====================================================*/
+
+.photoPage{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.photoTitle{
+
+font-size:58px;
+
+font-family:'Great Vibes',cursive;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 25px white,
+0 0 45px #79c8ff;
+
+}
+
+/* Gallery */
+
+.photoGallery{
+
+position:relative;
+
+width:100%;
+
+height:65vh;
+
+}
+
+/* Photo Frames */
+
+.photoFrame{
+
+position:absolute;
+
+width:250px;
+
+height:330px;
+
+padding:10px;
+
+background:rgba(255,255,255,.18);
+
+border:3px solid rgba(255,255,255,.35);
+
+border-radius:30px;
+
+backdrop-filter:blur(20px);
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 35px rgba(255,255,255,.30),
+
+0 0 70px rgba(70,170,255,.45);
+
+transition:.4s;
+
+}
+
+.frame1{
+
+top:20px;
+
+left:8%;
+
+animation:frameFloat1 4s ease-in-out infinite;
+
+}
+
+.frame2{
+
+top:120px;
+
+right:12%;
+
+animation:frameFloat2 4s ease-in-out infinite;
+
+}
+
+.frame3{
+
+bottom:10px;
+
+left:38%;
+
+animation:frameFloat3 4s ease-in-out infinite;
+
+}
+
+.photoFrame:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+}
+
+/* Frame Positions */
+
+.frame1{
+
+top:20px;
+
+left:8%;
+
+transform:rotate(-10deg);
+
+}
+
+.frame2{
+
+top:120px;
+
+right:12%;
+
+transform:rotate(9deg);
+
+}
+
+.frame3{
+
+bottom:10px;
+
+left:38%;
+
+transform:rotate(-3deg);
+
+}
+
+/* Image */
+
+.photoFrame img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:22px;
+
+}
+
+/* Floating Frames */
+
+@keyframes frameFloat1{
+
+0%,100%{
+
+transform:rotate(-10deg) translateY(0);
+
+}
+
+50%{
+
+transform:rotate(-10deg) translateY(-18px);
+
+}
+
+}
+
+@keyframes frameFloat2{
+
+0%,100%{
+
+transform:rotate(9deg) translateY(0);
+
+}
+
+50%{
+
+transform:rotate(9deg) translateY(-18px);
+
+}
+
+}
+
+@keyframes frameFloat3{
+
+0%,100%{
+
+transform:rotate(-3deg) translateY(0);
+
+}
+
+50%{
+
+transform:rotate(-3deg) translateY(-18px);
+
+}
+
+}
+
+/* Bottom Text */
+
+.bottomMessage{
+
+margin-top:25px;
+
+}
+
+.bottomMessage p{
+
+font-family:'Italianno',cursive;
+
+font-size:58px;
+
+text-align:center;
+
+color:white;
+
+text-shadow:
+
+0 0 18px white,
+
+0 0 40px #78c4ff;
+
+}
+/* =====================================================
+   SLIDE 4 - HAPPY BIRTHDAY LETTER
+===================================================== */
+
+.birthdayBackground{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+/* Glowing Background */
+
+.birthdayGlow{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,255,255,.35),
+rgba(0,140,255,.18),
+transparent);
+
+filter:blur(80px);
+
+animation:glowPulse 6s ease-in-out infinite;
+
+}
+
+/* Letter Container */
+
+.letterContainer{
+
+position:relative;
+
+z-index:10;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+animation:letterEntrance 1.6s ease;
+
+}
+
+/* Letter */
+
+.letter{
+
+width:88%;
+
+max-width:900px;
+
+padding:45px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.16);
+
+backdrop-filter:blur(25px);
+
+border:2px solid rgba(255,255,255,.30);
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.25),
+
+0 0 100px rgba(90,180,255,.35);
+
+}
+
+/* Heading */
+
+.birthdayHeading{
+
+font-size:64px;
+
+text-align:center;
+
+font-family:'Great Vibes',cursive;
+
+margin-bottom:30px;
+
+color:white;
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 40px #78c4ff;
+
+}
+
+/* Letter Text */
+
+.birthdayLetter{
+
+font-family:'Great Vibes',cursive;
+
+font-size:34px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:white;
+
+text-shadow:
+
+0 0 10px rgba(255,255,255,.8);
+
+}
+
+/* Letter Animation */
+
+@keyframes letterEntrance{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(120px)
+
+scale(.7)
+
+rotateX(90deg);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1)
+
+rotateX(0);
+
+}
+
+}
+
+/* Glow Pulse */
+
+@keyframes glowPulse{
+
+0%{
+
+transform:scale(.9);
+
+opacity:.5;
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(.9);
+
+opacity:.5;
+
+}
+
+}
+
+/* Floating Shine */
+
+.letter::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-50%;
+
+width:45%;
+
+height:300%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:rotate(20deg);
+
+animation:shine 6s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-60%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+
+/* Birthday Background Sparkles */
+
+.birthdayBackground::before{
+
+content:"✨ ✨ ✨ ✨ ✨ ✨";
+
+position:absolute;
+
+font-size:28px;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+animation:sparkleRotate 14s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes sparkleRotate{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+/* =====================================================
+   SLIDE 7 - PROPOSAL
+===================================================== */
+
+.proposalBackground{
+
+position:relative;
+width:100%;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#00142f,
+#003c8c,
+#4ea3ff,
+#dff5ff);
+
+}
+
+/* Floating Glow */
+
+.proposalGlow{
+
+position:absolute;
+
+width:800px;
+height:800px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(255,255,255,.35),
+rgba(70,170,255,.20),
+transparent);
+
+filter:blur(90px);
+
+animation:proposalGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes proposalGlow{
+
+0%,100%{
+
+transform:scale(.9);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Floating Particles */
+
+.proposalParticles{
+
+position:absolute;
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.proposalParticles::before{
+
+content:"💙 🤍 ✨ 💙 🤍 ✨ ❤️ 💙";
+
+position:absolute;
+
+font-size:28px;
+
+width:100%;
+
+animation:proposalFloat 20s linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes proposalFloat{
+
+0%{
+
+transform:translateY(120vh);
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+}
+
+}
+
+/* Proposal Letter */
+
+.proposalLetter{
+
+position:relative;
+
+z-index:5;
+
+width:90%;
+max-width:900px;
+
+padding:45px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(25px);
+
+border:2px solid rgba(255,255,255,.30);
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.25),
+
+0 0 100px rgba(90,180,255,.40);
+
+animation:proposalEntrance 1.3s ease;
+
+}
+
+@keyframes proposalEntrance{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(120px)
+scale(.75);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+/* Heading */
+
+.proposalTitle{
+
+font-family:'Great Vibes',cursive;
+
+font-size:62px;
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:white;
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 45px #7fcaff;
+
+}
+
+/* Message */
+
+.proposalText{
+
+font-family:'Great Vibes',cursive;
+
+font-size:33px;
+
+line-height:1.8;
+
+text-align:center;
+
+color:white;
+
+}
+
+/* Buttons */
+
+.proposalButtons{
+
+margin-top:45px;
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+}
+
+/* YES Button */
+
+#proposalYes{
+
+min-width:170px;
+
+animation:yesPulse 2s infinite;
+
+transition:.35s;
+
+}
+
+@keyframes yesPulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+/* NO Button */
+
+#proposalNo{
+
+transition:.3s;
+
+}
+
+#proposalNo:hover{
+
+animation:shake .45s;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(-6px);}
+50%{transform:translateX(6px);}
+75%{transform:translateX(-6px);}
+100%{transform:translateX(0);}
+
+}
+
+<section id="slide5">
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+/* =====================================================
+   SLIDE 8 - GRAND CELEBRATION
+===================================================== */
+
+.celebrationBackground{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#00142f,
+#003f9e,
+#0b6fff,
+#e8f8ff);
+
+}
+
+/* Glass Celebration Card */
+
+.celebrationGlass{
+
+position:relative;
+
+z-index:20;
+
+width:90%;
+
+max-width:950px;
+
+padding:50px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.16);
+
+backdrop-filter:blur(25px);
+
+border:2px solid rgba(255,255,255,.28);
+
+box-shadow:
+
+0 0 50px rgba(255,255,255,.30),
+
+0 0 120px rgba(80,170,255,.45);
+
+animation:celebrationPop 1.4s ease;
+
+}
+
+/* Entry Animation */
+
+@keyframes celebrationPop{
+
+0%{
+
+opacity:0;
+
+transform:
+
+scale(.4)
+
+rotate(-8deg);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+scale(1)
+
+rotate(0);
+
+}
+
+}
+
+/* Title */
+
+.celebrationTitle{
+
+font-family:'Great Vibes',cursive;
+
+font-size:74px;
+
+text-align:center;
+
+margin-bottom:15px;
+
+color:white;
+
+text-shadow:
+
+0 0 25px white,
+
+0 0 60px #6cc5ff;
+
+animation:titleGlow 2.5s infinite;
+
+}
+
+@keyframes titleGlow{
+
+0%,100%{
+
+text-shadow:
+
+0 0 20px white,
+
+0 0 40px #6cc5ff;
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 35px white,
+
+0 0 90px #8ddcff;
+
+}
+
+}
+
+/* Subtitle */
+
+.celebrationSubTitle{
+
+font-size:36px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:white;
+
+font-weight:bold;
+
+}
+
+/* Main Message */
+
+.celebrationMessage{
+
+font-family:'Great Vibes',cursive;
+
+font-size:34px;
+
+line-height:1.9;
+
+text-align:center;
+
+color:white;
+
+}
+
+/* Love Counter */
+
+.loveCounter{
+
+margin-top:35px;
+
+font-size:40px;
+
+text-align:center;
+
+font-weight:bold;
+
+color:white;
+
+animation:counterGlow 2s infinite;
+
+}
+
+@keyframes counterGlow{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.5;
+
+}
+
+}
+
+/* Ending Text */
+
+.endingText{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:22px;
+
+color:white;
+
+letter-spacing:2px;
+
+}
+
+/* Floating Hearts */
+
+.celebrationBackground .floatingHearts::before{
+
+content:"💙 🤍 ❤️ 💙 🤍 ❤️ 💙 🤍 ❤️";
+
+font-size:34px;
+
+animation:heartFloat 15s linear infinite;
+
+}
+
+/* Floating Balloons */
+
+.floatingBalloons::before{
+
+content:"🎈 🎈 🎈 🎈 🎈 🎈 🎈";
+
+font-size:60px;
+
+animation:balloonRise 16s linear infinite;
+
+}
+
+/* Sparkles */
+
+.sparkles::before{
+
+content:"✨ ✨ ⭐ ✨ ⭐ ✨ ⭐ ✨";
+
+font-size:30px;
+
+animation:sparkleMove 14s linear infinite;
+
+}
+
+/* Celebration Glow */
+
+.celebrationGlass::after{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+
+left:-60%;
+
+width:50%;
+
+height:220%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:rotate(20deg);
+
+animation:shineCelebration 6s linear infinite;
+
+}
+
+@keyframes shineCelebration{
+
+0%{
+
+left:-70%;
+
+}
+
+100%{
+
+left:160%;
+
+}
+
+}
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width:768px){
+
+.title{
+font-size:42px;
+padding:0 20px;
+}
+
+.slideTitle,
+.photoTitle,
+.birthdayHeading,
+.futureTitle,
+.proposalTitle,
+.celebrationTitle{
+font-size:42px;
+}
+
+.italianText,
+.birthdayLetter,
+.futureText,
+.proposalText,
+.celebrationMessage{
+font-size:24px;
+line-height:1.6;
+padding:0 15px;
+}
+
+.photoGallery{
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding-bottom:30px;
+}
+
+.photoFrame{
+position:relative;
+top:auto;
+left:auto;
+right:auto;
+bottom:auto;
+width:220px;
+height:300px;
+transform:none !important;
+}
+
+.balloonArea{
+gap:25px;
+}
+
+.balloon{
+width:90px;
+height:120px;
+font-size:55px;
+}
+
+.messageCard{
+width:92%;
+padding:25px;
+}
+
+.messageCard p{
+font-size:34px;
+}
+
+button{
+padding:14px 30px;
+font-size:18px;
+}
+
+.navigation{
+right:15px;
+bottom:15px;
+}
+
+.glass,
+.letter,
+.futureLetter,
+.proposalLetter,
+.celebrationGlass{
+width:95%;
+padding:25px;
+}
+
+}
+.secretLoveMessage{
+
+box-shadow:0 0 35px rgba(255,255,255,.35);
+
+border:1px solid rgba(255,255,255,.2);
+
+animation:secretGlow 2s infinite;
+
+}
+
+@keyframes secretGlow{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.04);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
